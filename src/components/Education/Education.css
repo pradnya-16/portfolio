@@ -1,0 +1,136 @@
+/* Academics.css */
+.academics-container {
+    position: relative;
+    padding: 100px 20px 50px; /* Adds spacing to prevent navbar overlap */
+    text-align: center;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .academics-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .academics-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .academic-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    width: 500px; /* Increased width */
+    text-align: left;
+  }
+  
+  
+  .academic-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .academic-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: normal;
+    color: #d4bfff;
+  
+
+}
+  
+  .academic-duration,
+  .academic-cgpa {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .academic-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  .academic-card ul li::marker{
+    color: #a88bff;
+  }
+
+  .academic-card ul li{
+    margin-bottom: 6px;
+  line-height: 1.5;
+  }
+
+  .section-heading {
+    margin-top: 60px;
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .courses-grid,
+  .certifications-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .course-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .cert-card {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    color: #eee;
+  }
+
+  .courses-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  .course-item {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .course-dot {
+    color: #50fa7b;
+    margin-right: 10px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    width: 100%;
+  }
+  
+  

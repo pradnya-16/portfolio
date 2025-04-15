@@ -2,12 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
+import cosmetic from "../../Assets/Projects/cosmetic.png";
 import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import recipe from "../../Assets/Projects/recipe.png";
+import merchandisemart from "../../Assets/Projects/merchandisemart.png";
+import rogue from "../../Assets/Projects/rogue game.png";
+import weather from "../../Assets/Projects/weather.png";
+import { matchRoutes } from "react-router-dom";
 
 function Projects() {
   return (
@@ -23,56 +24,68 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={merchandisemart}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Merchandise Mart"
+              description="Merchandise Mart is a full-stack e-commerce web application that allows users to browse products, view details, and proceed with checkout. 
+              It features user authentication, JWT-based protected routes, and a polished frontend built with React. 
+              The backend is powered by ASP.NET Core with a SQLite database and RESTful APIs."
+              ghLink="https://github.com/pradnya-16/Merchandise_Mart.git"
+              demoLink="https://merchandise-mart-o1s9.onrender.com/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={recipe}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Recipe Builder"
+              description="Recipe Finder is a native iOS application that allows users to search for recipes based on selected ingredients, 
+              add custom recipes, and manage favorites. Built using Swift and Core Data, the app features a clean UIKit-based interface, gesture-based interactions, 
+              and persistent local storage for a seamless user experience."
+              ghLink="https://github.com/pradnya-16/Recipe-Builder-App.git"
+              demoLink="https://youtu.be/FYRT-IBX9C0"              
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={weather}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Weather App"
+              description="Weather App is a native Android application that provides real-time weather updates using the Visual Crossing Weather API. 
+              It allows users to view current conditions, hourly forecasts, and a 15-day outlook based on their geolocation. 
+              The app features a clean UI, temperature-based dynamic themes, and interactive elements like map integration, share functionality, 
+              and unit toggling between Celsius and Fahrenheit."
+              ghLink="https://github.com/pradnya-16/Weather-App.git"
+              demoLink="#"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={cosmetic}
+              isBlog={false}
+              title="Ageing Sign Detection Cosmetic Product Recommendation System"
+              description="Ageing Sign Detection is a deep learning-based facial analysis system that classifies and localizes common signs 
+              of ageing such as puffy eyes, wrinkles, and dark spots. The model, built on EfficientNet, uses Haar cascades and facial 
+              landmarks for accurate detection and overlays bounding boxes around detected ageing signs."
+              ghLink="https://github.com/pradnya-16/Cosmetic-product-recommendation-System.git"
+              //demoLink="#"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={rogue}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Rogue Game"
+              description="Rogue Game is a 2D dungeon-style game built in Java using Swing. The player navigates rooms, avoids a pursuing monster, 
+              and reaches staircases to advance levels. The game features real-time movement, score and health tracking, monster AI behavior, 
+              and randomly generated player identities—all implemented with custom game logic and UI components."
+              ghLink="https://github.com/pradnya-16/Rogue-game.git"
+              //demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
             />
           </Col>
 
