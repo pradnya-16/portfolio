@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import cosmetic from "../../Assets/Projects/cosmetic.png";
-import emotion from "../../Assets/Projects/emotion.png";
+import algorithm from "../../Assets/Projects/algorithm.png";
 import recipe from "../../Assets/Projects/recipe.png";
 import merchandisemart from "../../Assets/Projects/merchandisemart.png";
 import rogue from "../../Assets/Projects/rogue game.png";
@@ -50,6 +50,19 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
+              imgPath={algorithm}
+              isBlog={false}
+              title="Algorithm-Viewer"
+              description="Algorithm Viewer is an interactive iOS app that visually demonstrates sorting algorithms with animated charts. 
+              Built using Xcode Storyboard and Swift, it enables side-by-side comparison of Insertion, Selection, Merge, and Quick Sort with real-time bar animations. 
+              The app leverages Grand Central Dispatch (GCD) for concurrent sorting and offers an intuitive UI for selecting algorithms and sample sizes."
+              ghLink="https://github.com/pradnya-16/Algorithm-Viewer.git"
+              demoLink="https://youtu.be/F_BTeDeraZM"              
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
               imgPath={weather}
               isBlog={false}
               title="Weather App"
@@ -89,17 +102,6 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col>
         </Row>
       </Container>
     </Container>
