@@ -132,5 +132,17 @@
     gap: 50px;
     width: 100%;
   }
+
+  .cert-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #8be9fd;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+  .cert-link:hover {
+    color: #50fa7b;
+  }
+  
   
   

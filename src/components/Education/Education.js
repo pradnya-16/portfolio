@@ -46,20 +46,31 @@ const keyCourses = [
 
 const certifications = [
   {
-    title: "Python Programming",
-    platform: "Coursera",
+    title: "Android App Development",
+    platform: "MyCaptain",
     year: "2022",
     description:
-      "Comprehensive course covering advanced Python concepts and applications.",
+      "Completed a hands-on workshop with MyCaptain (March 2022), covering the fundamentals of building Android applications using Java and XML. Gained experience in creating layouts, handling user input, and deploying basic functional apps.",
+    link: "https://drive.google.com/file/d/1xq7goiYprvDQiJlnIa0wIqOVFhvMwlEx/view?usp=sharing"
   },
   {
-    title: "Web Development with JavaScript",
-    platform: "Udemy",
-    year: "2022",
+    title: "Full Stack Development",
+    platform: "MyCaptain",
+    year: "2021",
     description:
-      "In-depth training on building modern web applications using JavaScript.",
+      "Completed a workshop with MyCaptain (September 2021), covering the core concepts of frontend and backend development. Gained practical experience in building responsive web applications using technologies like HTML, CSS, JavaScript, and introductory backend integration.",
+    link: "https://drive.google.com/file/d/1mb0DviVyuIibXqMtmGcKFsDJ9ZTFKBUX/view?usp=sharing"
+  },
+  {
+    title: "Artificial Intelligence",
+    platform: "MyCaptain",
+    year: "2021",
+    description:
+      "Artificial Intelligence – Completed a workshop with MyCaptain (August 2021) introducing core AI concepts, including supervised learning, decision trees, and neural networks. Gained hands-on experience through beginner-friendly projects and exercises focused on real-world AI applications.",
+    link: "https://drive.google.com/file/d/1v4Wr3lKwSUhVNW2G0hTCtPfJRQlIy2Zd/view?usp=sharing"
   },
 ];
+
 
 function Academics() {
   return (
@@ -97,14 +108,19 @@ function Academics() {
 
       <h2 className="section-heading">Certifications</h2>
       <div className="certifications-grid">
-        {certifications.map((cert, i) => (
-          <div key={i} className="cert-card">
-            <h3>{cert.title}</h3>
-            <p><strong>{cert.platform}</strong> • {cert.year}</p>
-            <p>{cert.description}</p>
-          </div>
-        ))}
-      </div>
+  {certifications.map((cert, i) => (
+    <div key={i} className="cert-card">
+      <h3>{cert.title}</h3>
+      <p><strong>{cert.platform}</strong> • {cert.year}</p>
+      <p>{cert.description}</p>
+      {cert.link && (
+        <a href={cert.link} target="_blank" rel="noopener noreferrer" className="cert-link">
+          View Certificate
+        </a>
+      )}
+    </div>
+  ))}
+</div>
     </div>
   );
 }
