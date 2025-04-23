@@ -3,6 +3,8 @@ import { Container } from "react-bootstrap";
 import Particle from "../Particle";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./Contact.css";
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,8 +19,31 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
-    setFormData({ name: "", email: "", message: "" });
+  
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      title: "New Contact Submission", 
+    };
+  
+    emailjs
+      .send(
+        "service_rsslnmh",        
+        "template_naiwdpt",       
+        templateParams,
+        "09L83G6cWP3Fz_iCz"         
+      )
+      .then(
+        (result) => {
+          alert("✅ Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("❌ Failed to send message. Please try again later.");
+        }
+      );
   };
 
   return (
