@@ -25,7 +25,7 @@ function Home2() {
               <i>
                 <b className="purple"> Java, Python, and Javascript. </b>
               </i>
-              <br />and Python, and I’ve been building my way through full stack development—front to back, UI to database, logic to deployment.
+              <br />I’ve been building my way through full stack development—front to back, UI to database, logic to deployment.
               <br />
               <br /> 
               I love creating clean, object-oriented code and bringing ideas to life through intuitive,
